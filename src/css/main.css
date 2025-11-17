@@ -106,6 +106,7 @@ header {
   line-height: 1.2;
   margin-bottom: 2rem;
   text-transform: uppercase;
+  color: #ff6fae;
 }
 
 .hero-links {
@@ -117,8 +118,9 @@ header {
 
 .hero-link {
   text-decoration: none;
-  color: #fff;
-  font-weight: 500;
+  background-color: transparent;
+  color: #ff6fae;
+  font-weight: 600;
   text-transform: uppercase;
   transition: opacity 0.3s ease;
   letter-spacing: 0.05em;
@@ -387,7 +389,7 @@ header {
 .tours-section .section-title {
   position: relative;
   z-index: 1;
-  color: #ff6fae;
+  color: #fff;
 }
 
 .tours-container {
@@ -466,7 +468,7 @@ header {
 .about-cta-section {
   width: 100%;
   padding: 6rem 2rem;
-  background-color: #181a1b;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -484,7 +486,7 @@ header {
   font-family: "Oswald", sans-serif;
   font-size: 2rem;
   font-weight: 500;
-  color: #ff6fae;
+  color: #333;
   margin-bottom: 2.5rem;
   max-width: 800px;
 }
