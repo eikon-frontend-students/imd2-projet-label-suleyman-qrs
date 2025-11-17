@@ -2,13 +2,322 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>eikon parcel starter</title>
+    <title>Sub Pop Records</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
   <body>
-    <h1>America ya</h1>
-    <p>Hallo</p>
+    <header>
+      <nav class="top-nav">
+        <div class="nav-logo">
+          <img src="images/logo.png" alt="Logo" class="logo" />
+        </div>
+        <ul class="nav-links">
+          <li><a href="#upcoming">Upcoming</a></li>
+          <li><a href="#merch">Merch</a></li>
+          <li><a href="#tours">Tours</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="#" aria-label="Instagram"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="#" aria-label="Spotify"
+            ><i class="fa-brands fa-spotify"></i
+          ></a>
+          <a href="#" aria-label="Soundcloud"
+            ><i class="fa-brands fa-soundcloud"></i
+          ></a>
+          <a href="#" aria-label="YouTube"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+          <a href="#" aria-label="Twitter"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <img src="images/hero.png" alt="IXWSITEEN Album Cover" />
+      <h1 class="hero-title">New Album Out Now<br />IXWSITEEN(I SEE YOU)</h1>
+      <div class="hero-links">
+        <a href="#" class="hero-link">STREAM</a>
+        <span class="divider">|</span>
+        <a href="#" class="hero-link">DOWNLOAD</a>
+        <span class="divider">|</span>
+        <a href="#" class="hero-link">BUY</a>
+      </div>
+    </section>
+
+    <section id="upcoming" class="upcoming-section">
+      <h2 class="section-title">UPCOMING</h2>
+      <div class="cards-container">
+        <div class="card">
+          <img src="images/yaseencover.png" alt="Album 1" class="card-image" />
+          <h3 class="card-album">Album Name</h3>
+          <p class="card-artist">Artist Name</p>
+          <div class="card-links">
+            <a href="#" class="card-link">STREAM</a>
+            <span class="divider">|</span>
+            <a href="#" class="card-link">DOWNLOAD</a>
+            <span class="divider">|</span>
+            <a href="#" class="card-link">BUY</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/beckncall.png" alt="Album 2" class="card-image" />
+          <h3 class="card-album">Album Name</h3>
+          <p class="card-artist">Artist Name</p>
+          <div class="card-links">
+            <a href="#" class="card-link">STREAM</a>
+            <span class="divider">|</span>
+            <a href="#" class="card-link">DOWNLOAD</a>
+            <span class="divider">|</span>
+            <a href="#" class="card-link">BUY</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/call.png" alt="Album 3" class="card-image" />
+          <h3 class="card-album">Album Name</h3>
+          <p class="card-artist">Artist Name</p>
+          <div class="card-links">
+            <a href="#" class="card-link">STREAM</a>
+            <span class="divider">|</span>
+            <a href="#" class="card-link">DOWNLOAD</a>
+            <span class="divider">|</span>
+            <a href="#" class="card-link">BUY</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/dreamwoman.png" alt="Album 4" class="card-image" />
+          <h3 class="card-album">Album Name</h3>
+          <p class="card-artist">Artist Name</p>
+          <div class="card-links">
+            <a href="#" class="card-link">STREAM</a>
+            <span class="divider">|</span>
+            <a href="#" class="card-link">DOWNLOAD</a>
+            <span class="divider">|</span>
+            <a href="#" class="card-link">BUY</a>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="view-all-btn">VIEW ALL RELEASES</a>
+    </section>
+
+    <section class="video-carousel-section">
+      <button
+        class="carousel-btn carousel-btn-left"
+        aria-label="Previous video"
+      >
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <div class="video-container">
+        <iframe
+          class="video-frame"
+          src="https://www.youtube.com/embed/bBaIQHi4LVw"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <button class="carousel-btn carousel-btn-right" aria-label="Next video">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </section>
+
+    <section id="merch" class="merch-section">
+      <h2 class="section-title">MERCH</h2>
+      <div class="merch-container">
+        <div class="merch-card">
+          <img src="images/merch1.png" alt="Merch 1" class="merch-image" />
+          <h3 class="merch-title">Merch Title</h3>
+          <p class="merch-price">$29.00</p>
+          <a href="#" class="merch-buy-btn">BUY</a>
+        </div>
+
+        <div class="merch-card">
+          <img src="images/merch2.png" alt="Merch 2" class="merch-image" />
+          <h3 class="merch-title">Merch Title</h3>
+          <p class="merch-price">$29.00</p>
+          <a href="#" class="merch-buy-btn">BUY</a>
+        </div>
+
+        <div class="merch-card">
+          <img src="images/merch3.png" alt="Merch 3" class="merch-image" />
+          <h3 class="merch-title">Merch Title</h3>
+          <p class="merch-price">$29.00</p>
+          <a href="#" class="merch-buy-btn">BUY</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="tours" class="tours-section">
+      <h2 class="section-title">TOURS</h2>
+      <div class="tours-container">
+        <div class="tour-card">
+          <div class="tour-header">
+            <span class="tour-artist">Artist Name</span>
+            <span class="tour-date">Dec 15, 2025</span>
+          </div>
+          <div class="tour-footer">
+            <span class="tour-location">New York, NY</span>
+            <a href="#" class="tour-ticket-btn">TICKETS</a>
+          </div>
+        </div>
+
+        <div class="tour-card">
+          <div class="tour-header">
+            <span class="tour-artist">Artist Name</span>
+            <span class="tour-date">Dec 20, 2025</span>
+          </div>
+          <div class="tour-footer">
+            <span class="tour-location">Los Angeles, CA</span>
+            <a href="#" class="tour-ticket-btn">TICKETS</a>
+          </div>
+        </div>
+
+        <div class="tour-card">
+          <div class="tour-header">
+            <span class="tour-artist">Artist Name</span>
+            <span class="tour-date">Dec 25, 2025</span>
+          </div>
+          <div class="tour-footer">
+            <span class="tour-location">Chicago, IL</span>
+            <a href="#" class="tour-ticket-btn">TICKETS</a>
+          </div>
+        </div>
+
+        <div class="tour-card">
+          <div class="tour-header">
+            <span class="tour-artist">Artist Name</span>
+            <span class="tour-date">Jan 5, 2026</span>
+          </div>
+          <div class="tour-footer">
+            <span class="tour-location">Seattle, WA</span>
+            <a href="#" class="tour-ticket-btn">TICKETS</a>
+          </div>
+        </div>
+
+        <div class="tour-card">
+          <div class="tour-header">
+            <span class="tour-artist">Artist Name</span>
+            <span class="tour-date">Jan 10, 2026</span>
+          </div>
+          <div class="tour-footer">
+            <span class="tour-location">Portland, OR</span>
+            <a href="#" class="tour-ticket-btn">TICKETS</a>
+          </div>
+        </div>
+
+        <div class="tour-card">
+          <div class="tour-header">
+            <span class="tour-artist">Artist Name</span>
+            <span class="tour-date">Jan 15, 2026</span>
+          </div>
+          <div class="tour-footer">
+            <span class="tour-location">Austin, TX</span>
+            <a href="#" class="tour-ticket-btn">TICKETS</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-cta-section">
+      <img src="images/logo.png" alt="Logo" class="about-logo" />
+      <p class="about-tagline">We're not the best, but we're pretty good</p>
+      <a href="#" class="learn-more-btn">LEARN MORE ABOUT US</a>
+    </section>
+
+    <footer class="footer">
+      <div class="newsletter-section">
+        <h2 class="newsletter-title">STAY UPDATED</h2>
+        <p class="newsletter-subtitle">
+          THE LATEST UPDATES STRAIGHT TO YOUR INBOX
+        </p>
+        <form class="newsletter-form">
+          <input
+            type="email"
+            class="newsletter-input"
+            placeholder="Enter your email address"
+            required
+          />
+          <button type="submit" class="newsletter-btn">SUBSCRIBE</button>
+        </form>
+      </div>
+
+      <div class="footer-main">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <img src="images/logo.png" alt="Logo" class="footer-logo" />
+          </div>
+
+          <nav class="footer-nav">
+            <h3 class="footer-nav-title">Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="#upcoming">Upcoming</a></li>
+              <li><a href="#merch">Merch</a></li>
+              <li><a href="#tours">Tours</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div class="footer-social">
+            <h3 class="footer-social-title">Follow Us</h3>
+            <div class="footer-social-icons">
+              <a href="#" aria-label="Facebook"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="Spotify"
+                ><i class="fa-brands fa-spotify"></i
+              ></a>
+              <a href="#" aria-label="Soundcloud"
+                ><i class="fa-brands fa-soundcloud"></i
+              ></a>
+              <a href="#" aria-label="YouTube"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2025 Sub Pop Records. All rights reserved.
+        </p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <span class="separator">|</span>
+          <a href="#">Terms of Service</a>
+          <span class="separator">|</span>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </footer>
 
     <script src="js/main.js" type="module"></script>
   </body>
