@@ -47,6 +47,7 @@ header {
 
 .nav-links {
   display: flex;
+  text-decoration: none;
   list-style: none;
   gap: 2rem;
   margin: 0;
@@ -78,6 +79,7 @@ header {
   color: #fff;
   font-size: 1.25rem;
   transition: color 0.3s ease;
+  text-decoration: none;
 }
 
 .social-icons a:hover {
@@ -93,10 +95,11 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #000;
-  color: #fff;
+  background-image: url("../images/hero.png");
+  background-size: cover;
+  background-position: center;
   padding: 2rem;
-  margin-top: 72px; /* Account for fixed header height */
+  margin-top: 72px;
 }
 
 .hero-title {
@@ -173,6 +176,7 @@ header {
 .card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
 }
 
 .card-image {
@@ -212,7 +216,7 @@ header {
 }
 
 .card-link:hover {
-  opacity: 0.6;
+  opacity: 1;
 }
 
 .card-links .divider {
@@ -225,8 +229,8 @@ header {
   width: fit-content;
   margin: 3rem auto 0;
   padding: 1rem 2.5rem;
-  background-color: #ff6fae;
-  color: #fff;
+  background-color: #fff;
+  color: #ff6fae;
   font-family: "Oswald", sans-serif;
   font-size: 1.125rem;
   font-weight: 500;
@@ -239,7 +243,8 @@ header {
 
 .view-all-btn:hover {
   background-color: #ff5599;
-  transform: translateY(-2px);
+  color: #fff;
+  transform: translateY(-4px);
 }
 
 /* Video Carousel Section */
