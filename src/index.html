@@ -17,39 +17,7 @@
     />
   </head>
   <body>
-    <header>
-      <nav class="top-nav">
-        <div class="nav-logo">
-          <img src="images/logo.png" alt="Logo" class="logo" />
-        </div>
-        <ul class="nav-links">
-          <li><a href="#upcoming">Upcoming</a></li>
-          <li><a href="#merch">Merch</a></li>
-          <li><a href="#tours">Tours</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="social-icons">
-          <a href="#" aria-label="Facebook"
-            ><i class="fa-brands fa-facebook"></i
-          ></a>
-          <a href="#" aria-label="Instagram"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-          <a href="#" aria-label="Spotify"
-            ><i class="fa-brands fa-spotify"></i
-          ></a>
-          <a href="#" aria-label="Soundcloud"
-            ><i class="fa-brands fa-soundcloud"></i
-          ></a>
-          <a href="#" aria-label="YouTube"
-            ><i class="fa-brands fa-youtube"></i
-          ></a>
-          <a href="#" aria-label="Twitter"
-            ><i class="fa-brands fa-x-twitter"></i
-          ></a>
-        </div>
-      </nav>
-    </header>
+    <include src="components/nav.html"></include>
 
     <section class="hero">
       <div class="video-background">
@@ -103,9 +71,7 @@
 
         <div class="card">
           <img src="images/call.png" alt="Album 3" class="card-image" />
-          <h3 class="card-album">
-            Eternity’s Pillars b/w Raise the Chalice & Reverential
-          </h3>
+          <h3 class="card-album">Eternity’s Pillars</h3>
           <p class="card-artist">sunn O)))</p>
           <div class="card-links">
             <a href="#" class="card-link">STREAM</a>
@@ -257,78 +223,7 @@
       <a href="#" class="learn-more-btn">LEARN MORE ABOUT US</a>
     </section>
 
-    <footer class="footer">
-      <div class="newsletter-section">
-        <h2 class="newsletter-title">STAY UPDATED</h2>
-        <p class="newsletter-subtitle">
-          THE LATEST UPDATES STRAIGHT TO YOUR INBOX
-        </p>
-        <form class="newsletter-form">
-          <input
-            type="email"
-            class="newsletter-input"
-            placeholder="Enter your email address"
-            required
-          />
-          <button type="submit" class="newsletter-btn">SUBSCRIBE</button>
-        </form>
-      </div>
-
-      <div class="footer-main">
-        <div class="footer-content">
-          <div class="footer-brand">
-            <img src="images/logo.png" alt="Logo" class="footer-logo" />
-          </div>
-
-          <nav class="footer-nav">
-            <h3 class="footer-nav-title">Quick Links</h3>
-            <ul class="footer-links">
-              <li><a href="#upcoming">Upcoming</a></li>
-              <li><a href="#merch">Merch</a></li>
-              <li><a href="#tours">Tours</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
-
-          <div class="footer-social">
-            <h3 class="footer-social-title">Follow Us</h3>
-            <div class="footer-social-icons">
-              <a href="#" aria-label="Facebook"
-                ><i class="fa-brands fa-facebook"></i
-              ></a>
-              <a href="#" aria-label="Instagram"
-                ><i class="fa-brands fa-instagram"></i
-              ></a>
-              <a href="#" aria-label="Spotify"
-                ><i class="fa-brands fa-spotify"></i
-              ></a>
-              <a href="#" aria-label="Soundcloud"
-                ><i class="fa-brands fa-soundcloud"></i
-              ></a>
-              <a href="#" aria-label="YouTube"
-                ><i class="fa-brands fa-youtube"></i
-              ></a>
-              <a href="#" aria-label="Twitter"
-                ><i class="fa-brands fa-x-twitter"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p class="footer-copyright">
-          &copy; 2025 Sub Pop Records. All rights reserved.
-        </p>
-        <div class="footer-legal">
-          <a href="#">Privacy Policy</a>
-          <span class="separator">|</span>
-          <a href="#">Terms of Service</a>
-          <span class="separator">|</span>
-          <a href="#">Cookie Policy</a>
-        </div>
-      </div>
-    </footer>
+    <include src="components/footer.html"></include>
 
     <script src="js/main.js" type="module"></script>
   </body>
