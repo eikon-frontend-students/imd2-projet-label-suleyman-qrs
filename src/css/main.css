@@ -95,16 +95,51 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url("../images/hero.png");
-  background-size: cover;
-  background-position: center;
+  position: relative;
+  overflow: hidden;
   padding: 2rem;
   margin-top: 72px;
 }
 
+.video-background {
+  background: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground {
+    width: 300%;
+    left: -100%;
+  }
+}
+
 .hero-title {
+  position: relative;
+  z-index: 1;
   font-family: "Oswald", sans-serif;
-  font-size: 64px;
+  font-size: 200px;
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 2rem;
@@ -113,6 +148,8 @@ header {
 }
 
 .hero-links {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   gap: 1.5rem;
