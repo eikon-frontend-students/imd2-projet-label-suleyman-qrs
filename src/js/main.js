@@ -1,8 +1,3 @@
-// Initialize video carousel when DOM is loaded
-document.addEventListener("DOMContentLoaded", function () {
-  videoCarousel();
-});
-
 // Video Carousel
 const videoCarousel = () => {
   // Array of YouTube video IDs
@@ -17,8 +12,6 @@ const videoCarousel = () => {
   const videoFrame = document.querySelector(".video-frame");
   const prevBtn = document.querySelector(".carousel-btn-left");
   const nextBtn = document.querySelector(".carousel-btn-right");
-
-  if (!videoFrame || !prevBtn || !nextBtn) return;
 
   // Function to update video
   const updateVideo = () => {
@@ -37,3 +30,6 @@ const videoCarousel = () => {
     updateVideo();
   });
 };
+
+// Initialize carousel when DOM is loaded
+document.addEventListener("DOMContentLoaded", videoCarousel);
