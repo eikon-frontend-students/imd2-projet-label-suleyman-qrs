@@ -269,8 +269,8 @@ header {
   width: fit-content;
   margin: 3rem auto 0;
   padding: 1rem 2.5rem;
-  background-color: #fff;
-  color: #ff6fae;
+  background-color: #ff6fae;
+  color: #fff;
   font-family: "Oswald", sans-serif;
   font-size: 1.125rem;
   font-weight: 500;
@@ -282,8 +282,8 @@ header {
 }
 
 .view-all-btn:hover {
-  background-color: #ff5599;
-  color: #fff;
+  background-color: #fff;
+  color: #ff6fae;
   transform: translateY(-4px);
 }
 
@@ -505,7 +505,7 @@ header {
 }
 
 .tour-ticket-btn:hover {
-  background-color: #ff5599;
+  background-color: #ff6fae;
   transform: translateY(-2px);
 }
 
@@ -552,8 +552,9 @@ header {
 }
 
 .learn-more-btn:hover {
-  background-color: #ff5599;
-  transform: translateY(-2px);
+  background-color: #fff;
+  color: #ff6fae;
+  transform: translateY(-4px);
 }
 
 /* Footer */
@@ -821,4 +822,168 @@ header {
 
 .artist-link:hover {
   opacity: 0.7;
+}
+
+/* Artist Profile Page Styles */
+.artist-hero {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  margin-top: 72px;
+  overflow: hidden;
+}
+
+.artist-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.artist-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.artist-hero-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 120px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.artist-about-section {
+  padding: 80px 160px;
+  background-color: #181a1b;
+}
+
+.artist-about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.artist-about-section .section-title {
+  color: #ff6fae;
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.artist-bio {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  line-height: 1.8;
+  color: #fff;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.artist-music-section {
+  padding: 80px 160px;
+  background-color: #000;
+}
+
+.artist-music-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.artist-music-section .section-title {
+  color: #ff6fae;
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.music-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.music-card {
+  background-color: #181a1b;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.music-card:hover {
+  transform: translateY(-5px);
+  border-color: #ff6fae;
+}
+
+.music-card-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.music-card-content {
+  padding: 25px;
+}
+
+.music-card-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.music-card-type {
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.music-card-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.music-link {
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.music-link:hover {
+  background-color: #ff6fae;
+  border-color: #ff6fae;
+  transform: translateY(-2px);
+}
+
+.music-link i {
+  font-size: 14px;
 }
