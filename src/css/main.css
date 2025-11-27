@@ -210,13 +210,11 @@ header {
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.635);
   padding: 1rem;
-  border-radius: 8px;
 }
 
 .card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
 }
 
 .card-image {
@@ -363,13 +361,13 @@ header {
   align-items: center;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.635);
   cursor: pointer;
   max-width: 400px;
 }
 
 .merch-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .merch-image {
@@ -859,10 +857,9 @@ header {
   font-family: "Oswald", sans-serif;
   font-size: 120px;
   font-weight: 700;
-  color: #fff;
+  color: #ff6fae;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
 }
 
 .artist-about-section {
@@ -887,7 +884,7 @@ header {
   font-family: "Oswald", sans-serif;
   font-size: 20px;
   line-height: 1.8;
-  color: #fff;
+  color: #ff6fae;
   text-align: center;
   max-width: 900px;
   margin: 0 auto;
