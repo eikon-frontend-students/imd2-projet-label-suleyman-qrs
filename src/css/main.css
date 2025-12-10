@@ -10,6 +10,28 @@ body {
   color: #fff;
 }
 
+/* Skip Link for Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #ff6fae;
+  color: #fff;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 10000;
+  border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+}
+
 a {
   color: inherit;
 }
@@ -208,7 +230,7 @@ header {
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.635);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   padding: 1rem;
 }
 
@@ -312,7 +334,7 @@ header {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.25);
   color: #333;
   border: none;
   width: 50px;
@@ -361,7 +383,7 @@ header {
   align-items: center;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.635);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   cursor: pointer;
   max-width: 400px;
 }
@@ -453,6 +475,7 @@ header {
   min-height: 120px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .tour-card:hover {
@@ -527,7 +550,8 @@ header {
 
 .about-tagline {
   font-family: "Oswald", sans-serif;
-  font-size: 2rem;
+  text-transform: uppercase;
+  font-size: 6rem;
   font-weight: 500;
   color: #333;
   margin-bottom: 2.5rem;
@@ -983,4 +1007,226 @@ header {
 
 .music-link i {
   font-size: 14px;
+}
+
+/* Tablet & MacBook Media Queries (768px - 1440px) */
+@media screen and (max-width: 1440px) {
+  /* Reduce horizontal padding for smaller screens */
+  .upcoming-section,
+  .merch-section,
+  .tours-section,
+  .about-section,
+  .artist-about-section,
+  .artist-music-section {
+    padding: 60px 80px;
+  }
+
+  /* Reduce title sizes */
+  .hero-title {
+    font-size: 64px;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+
+  .artist-hero-title {
+    font-size: 80px;
+  }
+
+  .artist-about-section .section-title,
+  .artist-music-section .section-title {
+    font-size: 36px;
+  }
+
+  /* Adjust tour section */
+  .tour-container {
+    gap: 20px;
+  }
+
+  .tour-card {
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  /* Further reduce padding for tablets */
+  .upcoming-section,
+  .merch-section,
+  .tours-section,
+  .about-section,
+  .artist-about-section,
+  .artist-music-section {
+    padding: 50px 40px;
+  }
+
+  /* Smaller title sizes for tablets */
+  .hero-title {
+    font-size: 48px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .artist-hero-title {
+    font-size: 60px;
+  }
+
+  .artist-about-section .section-title,
+  .artist-music-section .section-title {
+    font-size: 32px;
+  }
+
+  /* Adjust navigation */
+  .nav-links {
+    gap: 1.5rem;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  /* Adjust cards grid for tablets */
+  .upcoming-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .merch-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .tour-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .artists-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .music-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  /* Adjust hero height */
+  .hero {
+    height: 500px;
+  }
+
+  .artist-hero {
+    height: 400px;
+  }
+
+  /* Adjust footer */
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Mobile-first adjustments for smaller tablets */
+  .upcoming-section,
+  .merch-section,
+  .tours-section,
+  .about-section,
+  .artist-about-section,
+  .artist-music-section {
+    padding: 40px 20px;
+  }
+
+  /* Even smaller titles */
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .artist-hero-title {
+    font-size: 48px;
+  }
+
+  .artist-about-section .section-title,
+  .artist-music-section .section-title {
+    font-size: 28px;
+  }
+
+  /* Stack navigation vertically or reduce further */
+  .top-nav {
+    padding: 1rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  .social-icons a {
+    font-size: 16px;
+  }
+
+  /* Single column layouts */
+  .upcoming-cards,
+  .merch-container,
+  .tour-container,
+  .artists-container,
+  .music-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Adjust hero */
+  .hero {
+    height: 400px;
+  }
+
+  .artist-hero {
+    height: 350px;
+  }
+
+  /* Footer adjustments */
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-nav,
+  .footer-social {
+    text-align: center;
+  }
+
+  .footer-links,
+  .footer-social-icons {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  /* Adjust bio text size */
+  .artist-bio {
+    font-size: 16px;
+  }
+
+  /* Adjust card content */
+  .card-content h3,
+  .merch-card-content h3,
+  .music-card-title {
+    font-size: 20px;
+  }
 }
