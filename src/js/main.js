@@ -13,6 +13,8 @@ const videoCarousel = () => {
   const prevBtn = document.querySelector(".carousel-btn-left");
   const nextBtn = document.querySelector(".carousel-btn-right");
 
+  if (!videoFrame || !prevBtn || !nextBtn) return;
+
   // Function to update video
   const updateVideo = () => {
     videoFrame.src = `https://www.youtube.com/embed/${videoIds[currentIndex]}`;
@@ -31,5 +33,43 @@ const videoCarousel = () => {
   });
 };
 
-// Initialize carousel when DOM is loaded
-document.addEventListener("DOMContentLoaded", videoCarousel);
+// Burger Menu
+const burgerMenu = () => {
+  const burger = document.querySelector(".burger-menu");
+  const navLinks = document.querySelector(".nav-links");
+  const socialIcons = document.querySelector(".social-icons");
+  const body = document.body;
+
+  if (!burger) return;
+
+  burger.addEventListener("click", () => {
+    const isActive = burger.classList.toggle("active");
+    burger.setAttribute("aria-expanded", isActive);
+
+    if (navLinks) navLinks.classList.toggle("active");
+    if (socialIcons) socialIcons.classList.toggle("active");
+
+    // Prevent body scroll when menu is open
+    body.style.overflow = isActive ? "hidden" : "";
+  });
+
+  // Close menu when clicking on a link
+  if (navLinks) {
+    const links = navLinks.querySelectorAll("a");
+    links.forEach((link) => {
+      link.addEventListener("click", () => {
+        burger.classList.remove("active");
+        burger.setAttribute("aria-expanded", "false");
+        navLinks.classList.remove("active");
+        if (socialIcons) socialIcons.classList.remove("active");
+        body.style.overflow = "";
+      });
+    });
+  }
+};
+
+// Initialize when DOM is loaded
+document.addEventListener("DOMContentLoaded", () => {
+  videoCarousel();
+  burgerMenu();
+});

@@ -806,7 +806,6 @@ header {
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 1.5rem;
-  border-radius: 8px;
 }
 
 .artist-card:hover {
@@ -946,7 +945,6 @@ header {
 .music-card {
   background-color: #181a1b;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
@@ -997,7 +995,6 @@ header {
   text-decoration: none;
   padding: 8px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
@@ -1233,5 +1230,330 @@ header {
   .merch-card-content h3,
   .music-card-title {
     font-size: 20px;
+  }
+}
+
+/* Mobile Phone Media Query (up to 480px) */
+@media screen and (max-width: 480px) {
+  /* Mobile padding */
+  .upcoming-section,
+  .merch-section,
+  .tours-section,
+  .about-section,
+  .artist-about-section,
+  .artist-music-section {
+    padding: 30px 15px;
+  }
+
+  /* Mobile hero - TikTok vertical format */
+  .hero {
+    height: 100vh;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .video-background {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .video-foreground {
+    width: auto !important;
+    height: 100% !important;
+    left: 50% !important;
+    top: 0 !important;
+    transform: translateX(-50%);
+    min-width: 100vw;
+  }
+
+  .video-foreground iframe {
+    width: 177.77vh; /* 16:9 aspect ratio adjusted for vertical */
+    height: 100vh;
+    min-height: 100vh;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .hero-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 90%;
+  }
+
+  .hero-buttons {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+
+  /* Mobile title sizes */
+  .hero-title {
+    font-size: 28px;
+    letter-spacing: 0.05em;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .artist-hero-title {
+    font-size: 36px;
+  }
+
+  .artist-about-section .section-title,
+  .artist-music-section .section-title {
+    font-size: 24px;
+  }
+
+  .page-title {
+    font-size: 36px;
+  }
+
+  /* Artist hero adjustments */
+  .artist-hero {
+    height: 300px;
+  }
+
+  .artists-hero {
+    padding: 60px 15px;
+  }
+
+  /* Card content sizing */
+  .card-content h3,
+  .merch-card-content h3,
+  .tour-card h3,
+  .artist-name,
+  .music-card-title {
+    font-size: 18px;
+  }
+
+  .card-content p,
+  .merch-card-content p,
+  .tour-card p,
+  .artist-genre,
+  .music-card-type {
+    font-size: 12px;
+  }
+
+  .artist-bio {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* Button sizes */
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    font-size: 14px;
+    padding: 12px 24px;
+    width: 100%;
+  }
+
+  .card-links a,
+  .merch-links a,
+  .tour-btn,
+  .artist-link {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+
+  /* Newsletter section */
+  .newsletter-section {
+    padding: 40px 15px;
+  }
+
+  .newsletter-title {
+    font-size: 24px;
+  }
+
+  .newsletter-subtitle {
+    font-size: 12px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .newsletter-input {
+    font-size: 14px;
+  }
+
+  .newsletter-btn {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  /* Footer adjustments */
+  .footer-main {
+    padding: 40px 15px;
+  }
+
+  .footer-nav-title,
+  .footer-social-title {
+    font-size: 16px;
+  }
+
+  .footer-links a,
+  .footer-legal a {
+    font-size: 12px;
+  }
+
+  .footer-copyright {
+    font-size: 12px;
+  }
+
+  /* Video carousel */
+  .video-carousel {
+    padding: 40px 15px;
+  }
+
+  .carousel-controls button {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  /* About section */
+  .about-content h2 {
+    font-size: 32px;
+  }
+
+  .about-tagline {
+    font-size: 14px;
+  }
+
+  /* Music cards */
+  .music-card-image {
+    height: 250px;
+  }
+
+  .music-card-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .music-link {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Tour cards */
+  .tour-card {
+    padding: 20px;
+  }
+
+  /* Logo size */
+  .nav-logo .logo {
+    height: 30px;
+  }
+}
+
+/* Burger Menu Styles */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.burger-menu span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.burger-menu.active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.burger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+  transform: translateY(-11px) rotate(-45deg);
+}
+
+/* Mobile Navigation */
+@media screen and (max-width: 768px) {
+  .burger-menu {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 72px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 72px);
+    background-color: #000;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 40px 20px;
+    gap: 30px;
+    transition: left 0.3s ease;
+    z-index: 999;
+    overflow-y: auto;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links a {
+    font-size: 20px;
+    padding: 15px;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .social-icons {
+    position: fixed;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    background-color: #000;
+    padding: 20px;
+    justify-content: center;
+    gap: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    transition: left 0.3s ease;
+    z-index: 999;
+  }
+
+  .social-icons.active {
+    left: 0;
+  }
+
+  .social-icons a {
+    font-size: 24px;
   }
 }
