@@ -10,6 +10,11 @@ body {
   color: #fff;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* keeps anchored content clear of the fixed header */
+}
+
 /* Skip Link for Accessibility */
 .skip-link {
   position: absolute;
