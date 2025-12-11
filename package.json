@@ -6,7 +6,8 @@
     "clean:output": "rimraf dist",
     "clean:cache": "rimraf .parcel-cache",
     "dev": "npm run clean:cache && parcel src/index.html src/artists/index.html src/artists/ya-seen.html",
-    "build": "npm run clean:output && parcel build src/index.html src/artists/index.html src/artists/ya-seen.html --no-cache"
+    "build": "npm run clean:output && parcel build src/index.html src/artists/index.html src/artists/ya-seen.html --public-url './' --no-cache && npm run postbuild",
+    "postbuild": "mkdir -p dist/artists/css && cp -r dist/css/* dist/artists/css/ && mkdir -p dist/artists/js && cp -r dist/js/* dist/artists/js/ && mkdir -p dist/artists/img && cp -r dist/img/* dist/artists/img/"
   },
   "repository": {
     "type": "git",
