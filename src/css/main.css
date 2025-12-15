@@ -4,10 +4,18 @@
   padding: 0;
 }
 
+:root {
+  --pink: #ff6fae;
+  --bg-dark: #181a1b;
+  --black: #000000;
+  --white: #ffffff;
+  --muted: #cccccc;
+}
+
 body {
   font-family: "Oswald", sans-serif;
-  background-color: #181a1b;
-  color: #fff;
+  background-color: var(--bg-dark);
+  color: var(--white);
 }
 
 html {
@@ -20,8 +28,8 @@ html {
   position: absolute;
   top: -40px;
   left: 0;
-  background-color: #ff6fae;
-  color: #fff;
+  background-color: var(--pink);
+  color: var(--white);
   padding: 8px 16px;
   text-decoration: none;
   font-family: "Oswald", sans-serif;
@@ -33,12 +41,13 @@ html {
 
 .skip-link:focus {
   top: 0;
-  outline: 3px solid #fff;
+  outline: 3px solid var(--white);
   outline-offset: 2px;
 }
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 img,
@@ -53,7 +62,7 @@ header {
   left: 0;
   right: 0;
   width: 100%;
-  background-color: #000;
+  background-color: var(--black);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
@@ -84,7 +93,7 @@ header {
 
 .nav-links a {
   text-decoration: none;
-  color: #fff;
+  color: var(--white);
   font-weight: 500;
   text-transform: uppercase;
   font-size: 0.9rem;
@@ -92,7 +101,7 @@ header {
 }
 
 .nav-links a:hover {
-  color: #ff6fae;
+  color: var(--pink);
 }
 
 .social-icons {
@@ -104,14 +113,14 @@ header {
 .social-icons a {
   display: flex;
   align-items: center;
-  color: #fff;
+  color: var(--white);
   font-size: 1.25rem;
   transition: color 0.3s ease;
   text-decoration: none;
 }
 
 .social-icons a:hover {
-  color: #ff6fae;
+  color: var(--pink);
 }
 
 /* ----- Hero with video background and CTAs ----- */
@@ -131,7 +140,7 @@ header {
 
 /* Full-bleed video layer behind the hero content */
 .video-background {
-  background: #000;
+  background: var(--black);
   position: absolute;
   top: 0;
   right: 0;
@@ -193,7 +202,7 @@ header {
   line-height: 1.2;
   margin-bottom: 2rem;
   text-transform: uppercase;
-  color: #ff6fae;
+  color: var(--pink);
 }
 
 .hero-links {
@@ -208,7 +217,7 @@ header {
 .hero-link {
   text-decoration: none;
   background-color: transparent;
-  color: #ff6fae;
+  color: var(--pink);
   font-weight: 600;
   text-transform: uppercase;
   transition: opacity 0.3s ease;
@@ -220,7 +229,7 @@ header {
 }
 
 .divider {
-  color: #fff;
+  color: var(--white);
   opacity: 0.5;
 }
 
@@ -228,7 +237,7 @@ header {
 .upcoming-section {
   width: 100%;
   padding: 4rem 0;
-  background-color: #181a1b;
+  background-color: var(--bg-dark);
 }
 
 /* Section headers with subtle marquee background */
@@ -242,7 +251,7 @@ header {
   padding: clamp(1.5rem, 3vw, 2.75rem) 0;
   width: 100%;
   line-height: 1.15;
-  color: #ff6fae;
+  color: var(--pink);
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -256,7 +265,7 @@ header {
   top: 50%;
   transform: translateY(-50%);
   font-size: clamp(3rem, 12vw, 8rem);
-  color: #fff;
+  color: var(--white);
   opacity: 0.05;
   white-space: nowrap;
   pointer-events: none;
@@ -310,7 +319,7 @@ header {
 .card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 30px rgba(255, 111, 174, 0.35);
-  border-color: #ff6fae;
+  border-color: var(--pink);
 }
 
 .card-image {
@@ -326,12 +335,12 @@ header {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  color: #fff;
+  color: var(--white);
 }
 
 .card-artist {
   font-size: 1rem;
-  color: #ccc;
+  color: var(--muted);
   margin-bottom: 1rem;
 }
 
@@ -343,8 +352,7 @@ header {
 }
 
 .card-link {
-  text-decoration: none;
-  color: #fff;
+  color: var(--white);
   font-weight: 500;
   text-transform: uppercase;
   transition: color 0.3s ease, opacity 0.3s ease;
@@ -353,11 +361,11 @@ header {
 
 .card-link:hover {
   opacity: 1;
-  color: #ff6fae;
+  color: var(--pink);
 }
 
 .card-links .divider {
-  color: #fff;
+  color: var(--white);
   opacity: 0.5;
 }
 
@@ -366,8 +374,8 @@ header {
   width: fit-content;
   margin: 3rem auto 0;
   padding: 1rem 2.5rem;
-  background-color: #ff6fae;
-  color: #fff;
+  background-color: var(--pink);
+  color: var(--white);
   font-family: "Oswald", sans-serif;
   font-size: 1.125rem;
   font-weight: 500;
@@ -379,8 +387,8 @@ header {
 }
 
 .view-all-btn:hover {
-  background-color: #fff;
-  color: #ff6fae;
+  background-color: var(--white);
+  color: var(--pink);
   transform: translateY(-4px);
 }
 
@@ -390,7 +398,7 @@ header {
   width: 100%;
   display: flex;
   align-items: center;
-  background-color: #000;
+  background-color: var(--black);
   padding: 4rem 0;
 }
 
@@ -427,7 +435,7 @@ header {
 }
 
 .carousel-btn:hover {
-  background-color: #fff;
+  background-color: var(--white);
   transform: translateY(-50%) scale(1.1);
 }
 
@@ -443,7 +451,7 @@ header {
 .merch-section {
   width: 100%;
   padding: 4rem 0;
-  background-color: #181a1b;
+  background-color: var(--bg-dark);
 }
 
 .merch-container {
@@ -473,7 +481,7 @@ header {
 .merch-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 30px rgba(255, 111, 174, 0.35);
-  border-color: #ff6fae;
+  border-color: var(--pink);
 }
 
 .merch-image {
@@ -489,13 +497,13 @@ header {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
 }
 
 .merch-price {
   font-size: 1.35rem;
-  color: #ff6fae;
+  color: var(--pink);
   margin-bottom: 1rem;
   font-weight: 600;
 }
@@ -503,7 +511,7 @@ header {
 .merch-buy-btn {
   display: inline-block;
   text-decoration: none;
-  color: #fff;
+  color: var(--white);
   background: transparent;
   font-weight: 600;
   text-transform: uppercase;
@@ -522,12 +530,12 @@ header {
 
 /* Make merch links (if present) match hover accent */
 .merch-links a {
-  color: #fff;
+  color: var(--white);
   transition: color 0.3s ease, opacity 0.3s ease;
 }
 
 .merch-links a:hover {
-  color: #ff6fae;
+  color: var(--pink);
   opacity: 1;
 }
 
@@ -556,7 +564,7 @@ header {
 .tours-section .section-title {
   position: relative;
   z-index: 1;
-  color: #fff;
+  color: var(--white);
 }
 
 .tours-section .view-all-btn {
@@ -577,7 +585,7 @@ header {
 }
 
 .tour-card {
-  background-color: #181a1b;
+  background-color: var(--bg-dark);
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -591,7 +599,7 @@ header {
 .tour-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(255, 111, 174, 0.35);
-  border-color: #ff6fae;
+  border-color: var(--pink);
 }
 
 .tour-header {
@@ -602,7 +610,7 @@ header {
 }
 
 .tour-artist {
-  color: #fff;
+  color: var(--white);
   font-size: 1.125rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -625,8 +633,8 @@ header {
 }
 
 .tour-ticket-btn {
-  background-color: #ff6fae;
-  color: #fff;
+  background-color: var(--pink);
+  color: var(--white);
   padding: 0.5rem 1.25rem;
   text-decoration: none;
   text-transform: uppercase;
@@ -637,7 +645,7 @@ header {
 }
 
 .tour-ticket-btn:hover {
-  background-color: #ff6fae;
+  background-color: var(--pink);
   transform: translateY(-2px);
 }
 
@@ -645,7 +653,7 @@ header {
 .about-cta-section {
   width: 100%;
   padding: 6rem 2rem;
-  background-color: #fff;
+  background-color: var(--white);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -672,8 +680,8 @@ header {
 .learn-more-btn {
   display: inline-block;
   padding: 1rem 2.5rem;
-  background-color: #ff6fae;
-  color: #fff;
+  background-color: var(--pink);
+  color: var(--white);
   font-family: "Oswald", sans-serif;
   font-size: 1.125rem;
   font-weight: 500;
@@ -685,15 +693,15 @@ header {
 }
 
 .learn-more-btn:hover {
-  background-color: #fff;
-  color: #ff6fae;
+  background-color: var(--white);
+  color: var(--pink);
   transform: translateY(-4px);
 }
 
 /* ----- Footer ----- */
 .footer {
-  background-color: #000;
-  color: #fff;
+  background-color: var(--black);
+  color: var(--white);
 }
 
 /* Newsletter Section */
@@ -713,7 +721,7 @@ header {
 
 .newsletter-subtitle {
   font-size: 1rem;
-  color: #ccc;
+  color: var(--muted);
   margin-bottom: 2rem;
   letter-spacing: 0.05em;
 }
@@ -731,8 +739,8 @@ header {
   width: 100%;
   padding: 1rem 1.5rem;
   border: 2px solid #333;
-  background-color: #000;
-  color: #fff;
+  background-color: var(--black);
+  color: var(--white);
   font-size: 1rem;
   outline: none;
   transition: border-color 0.3s ease;
@@ -743,13 +751,13 @@ header {
 }
 
 .newsletter-input:focus {
-  border-color: #ff6fae;
+  border-color: var(--pink);
 }
 
 .newsletter-btn {
   padding: 1rem 2.5rem;
-  background-color: #fff;
-  color: #ff6fae;
+  background-color: var(--white);
+  color: var(--pink);
   border: none;
   font-family: "Oswald", sans-serif;
   font-size: 1.125rem;
@@ -761,8 +769,8 @@ header {
 }
 
 .newsletter-btn:hover {
-  background-color: #ff6fae;
-  color: #fff;
+  background-color: var(--pink);
+  color: var(--white);
   transform: translateY(-2px);
 }
 
@@ -811,13 +819,13 @@ header {
 
 .footer-links a {
   text-decoration: none;
-  color: #ccc;
+  color: var(--muted);
   transition: color 0.3s ease;
   font-size: 0.95rem;
 }
 
 .footer-links a:hover {
-  color: #ff6fae;
+  color: var(--pink);
 }
 
 .footer-social-icons {
@@ -827,13 +835,13 @@ header {
 }
 
 .footer-social-icons a {
-  color: #ccc;
+  color: var(--muted);
   font-size: 1.5rem;
   transition: color 0.3s ease;
 }
 
 .footer-social-icons a:hover {
-  color: #ff6fae;
+  color: var(--pink);
 }
 
 /* Footer Bottom */
@@ -869,7 +877,7 @@ header {
 }
 
 .footer-legal a:hover {
-  color: #ff6fae;
+  color: var(--pink);
 }
 
 .footer-legal .separator {
@@ -883,7 +891,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #000;
+  background-color: var(--black);
   margin-top: 72px;
 }
 
@@ -891,14 +899,14 @@ header {
   font-family: "Oswald", sans-serif;
   font-size: 72px;
   font-weight: 600;
-  color: #ff6fae;
+  color: var(--pink);
   text-transform: uppercase;
 }
 
 .artists-section {
   width: 100%;
   padding: 4rem 0;
-  background-color: #181a1b;
+  background-color: var(--bg-dark);
 }
 
 .artists-container {
@@ -928,7 +936,7 @@ header {
 .artist-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 30px rgba(255, 111, 174, 0.35);
-  border-color: #ff6fae;
+  border-color: var(--pink);
 }
 
 .artist-image {
@@ -944,20 +952,20 @@ header {
 .artist-name {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--white);
   margin-bottom: 0.5rem;
   text-transform: uppercase;
 }
 
 .artist-genre {
   font-size: 1rem;
-  color: #ccc;
+  color: var(--muted);
   margin-bottom: 1.5rem;
 }
 
 .artist-link {
   text-decoration: none;
-  color: #ff6fae;
+  color: var(--pink);
   font-weight: 600;
   text-transform: uppercase;
   font-size: 0.9rem;
@@ -1006,7 +1014,7 @@ header {
   font-family: "Oswald", sans-serif;
   font-size: 120px;
   font-weight: 700;
-  color: #ff6fae;
+  color: var(--pink);
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
@@ -1025,7 +1033,7 @@ header {
 
 .artist-about-section {
   padding: 80px 160px;
-  background-color: #181a1b;
+  background-color: var(--bg-dark);
 }
 
 .artist-about-container {
@@ -1034,7 +1042,7 @@ header {
 }
 
 .artist-about-section .section-title {
-  color: #ff6fae;
+  color: var(--pink);
   font-size: 48px;
   font-weight: 600;
   margin-bottom: 30px;
@@ -1045,7 +1053,7 @@ header {
   font-family: "Oswald", sans-serif;
   font-size: 20px;
   line-height: 1.8;
-  color: #ff6fae;
+  color: var(--pink);
   text-align: center;
   max-width: 900px;
   margin: 0 auto;
@@ -1059,19 +1067,19 @@ header {
 }
 
 .artist-social a {
-  color: #ff6fae;
+  color: var(--pink);
   font-size: 1.5rem;
   transition: color 0.3s ease;
 }
 
 .artist-social a:hover {
-  color: #fff;
+  color: var(--white);
 }
 
 .artist-contact {
   margin-top: 2rem;
   text-align: center;
-  color: #fff;
+  color: var(--white);
   line-height: 1.6;
 }
 
@@ -1081,18 +1089,18 @@ header {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
-  color: #ff6fae;
+  color: var(--pink);
 }
 
 .artist-contact p {
   margin: 0.1rem 0;
   font-size: 0.95rem;
-  color: #ccc;
+  color: var(--muted);
 }
 
 .artist-music-section {
   padding: 80px 160px;
-  background-color: #181a1b;
+  background-color: var(--bg-dark);
 }
 
 .artist-music-container {
@@ -1101,7 +1109,7 @@ header {
 }
 
 .artist-music-section .section-title {
-  color: #ff6fae;
+  color: var(--pink);
   font-size: 48px;
   font-weight: 600;
   margin-bottom: 50px;
@@ -1115,7 +1123,7 @@ header {
 }
 
 .music-card {
-  background-color: #181a1b;
+  background-color: var(--bg-dark);
   border: 1px solid rgba(255, 255, 255, 0.2);
   overflow: hidden;
   transition: transform 0.3s ease, border-color 0.3s ease;
@@ -1123,7 +1131,7 @@ header {
 
 .music-card:hover {
   transform: translateY(-5px);
-  border-color: #ff6fae;
+  border-color: var(--pink);
   box-shadow: 0 8px 25px rgba(255, 111, 174, 0.35);
 }
 
@@ -1141,7 +1149,7 @@ header {
   font-family: "Oswald", sans-serif;
   font-size: 24px;
   font-weight: 600;
-  color: #fff;
+  color: var(--white);
   margin-bottom: 10px;
   text-transform: uppercase;
 }
@@ -1164,7 +1172,7 @@ header {
 .music-link {
   font-family: "Oswald", sans-serif;
   font-size: 14px;
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
   padding: 8px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1175,8 +1183,8 @@ header {
 }
 
 .music-link:hover {
-  background-color: #ff6fae;
-  border-color: #ff6fae;
+  background-color: var(--pink);
+  border-color: var(--pink);
   transform: translateY(-2px);
 }
 
@@ -1234,7 +1242,7 @@ header {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: #fff;
+  background: var(--white);
   mix-blend-mode: screen;
   padding: 2rem;
 }
@@ -1242,7 +1250,7 @@ header {
 .shape-playground__title {
   font-family: "Oswald", sans-serif;
   font-size: clamp(2rem, 6vw, 3.5rem);
-  color: #000;
+  color: var(--black);
   margin-bottom: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -1251,7 +1259,7 @@ header {
 .shape-playground__subtitle {
   max-width: 720px;
   margin: 0 auto;
-  color: #000;
+  color: var(--black);
   font-size: 1rem;
   letter-spacing: 0.02em;
 }
@@ -1275,7 +1283,7 @@ header {
 }
 
 .shape-playground::selection {
-  color: #fff;
+  color: var(--white);
   background: #ff2d92;
 }
 
@@ -1779,7 +1787,7 @@ header {
   display: block;
   width: 100%;
   height: 3px;
-  background-color: #fff;
+  background-color: var(--white);
   transition: all 0.3s ease;
   border-radius: 2px;
 }
@@ -1808,7 +1816,7 @@ header {
     left: -100%;
     width: 100%;
     height: calc(100vh - 72px);
-    background-color: #000;
+    background-color: var(--black);
     flex-direction: column;
     justify-content: flex-start;
     padding: 40px 20px;
@@ -1840,7 +1848,7 @@ header {
     bottom: 0;
     left: -100%;
     width: 100%;
-    background-color: #000;
+    background-color: var(--black);
     padding: 20px;
     justify-content: center;
     gap: 30px;
