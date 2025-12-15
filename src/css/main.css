@@ -1040,6 +1040,124 @@ header {
   font-size: 14px;
 }
 
+/* Shape Playground (from CodePen) */
+.shape-playground {
+  position: relative;
+  height: 70vh;
+  min-height: 420px;
+  width: 100%;
+  overflow: hidden;
+  background: #ff2d92;
+}
+
+.shape-playground .shapes {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.shape-playground .shape {
+  position: absolute;
+  border-radius: 50%;
+  will-change: transform;
+}
+
+.shape-playground .shape-1 {
+  background: #ff4fbf;
+  width: 650px;
+  height: 650px;
+  margin: -325px 0 0 -325px;
+}
+
+.shape-playground .shape-2 {
+  background: #ffd5f0;
+  width: 440px;
+  height: 440px;
+  margin: -220px 0 0 -220px;
+}
+
+.shape-playground .shape-3 {
+  background: #ff8adf;
+  width: 270px;
+  height: 270px;
+  margin: -135px 0 0 -135px;
+}
+
+.shape-playground__content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #fff;
+  mix-blend-mode: screen;
+  padding: 2rem;
+}
+
+.shape-playground__title {
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  color: #000;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.shape-playground__subtitle {
+  max-width: 720px;
+  margin: 0 auto;
+  color: #000;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.shape-playground .cursor {
+  position: absolute;
+  background: #ff2d92;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border-radius: 50%;
+  will-change: transform;
+  user-select: none;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+.shape-playground,
+.shape-playground * {
+  cursor: none;
+}
+
+.shape-playground::selection {
+  color: #fff;
+  background: #ff2d92;
+}
+
+@media (max-width: 768px) {
+  .shape-playground {
+    height: 60vh;
+    min-height: 320px;
+  }
+
+  .shape-playground .cursor {
+    display: none;
+  }
+
+  .shape-playground,
+  .shape-playground * {
+    cursor: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .shape-playground {
+    height: 50vh;
+    min-height: 280px;
+  }
+}
+
 /* Tablet Media Queries */
 @media screen and (max-width: 1440px) {
   /* Reduce horizontal padding for smaller screens */
