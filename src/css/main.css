@@ -677,7 +677,6 @@ header {
   transform: translateY(-2px);
 }
 
-/* Footer Main */
 .footer-main {
   padding: 3rem 1.5rem;
   max-width: 1200px;
@@ -1041,7 +1040,7 @@ header {
   font-size: 14px;
 }
 
-/* Tablet & MacBook Media Queries (768px - 1440px) */
+/* Tablet Media Queries */
 @media screen and (max-width: 1440px) {
   /* Reduce horizontal padding for smaller screens */
   .upcoming-section,
@@ -1262,8 +1261,7 @@ header {
     font-size: 20px;
   }
 }
-
-/* Mobile Phone Media Query (up to 480px) */
+/* Phone Media Query */
 @media screen and (max-width: 480px) {
   /* Mobile padding */
   .upcoming-section,
