@@ -140,7 +140,12 @@ const shapePlayground = () => {
       audio.currentTime = 0;
     };
 
+    // Pointerenter is not always treated as a user gesture for audio;
+    // also listen for clicks/taps to reliably start playback.
     textArea.addEventListener("pointerenter", startAudio);
+    textArea.addEventListener("pointerdown", startAudio);
+    textArea.addEventListener("click", startAudio);
+    textArea.addEventListener("touchstart", startAudio, { passive: true });
     textArea.addEventListener("pointerleave", stopAudio);
     textArea.addEventListener("focusin", startAudio);
     textArea.addEventListener("focusout", stopAudio);
