@@ -158,6 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
   burgerMenu();
   shapePlayground();
   normalizeNavLinks();
+  initVideoPoster();
 });
 
 // Normalize nav links so they always point to the site root (prevents nested paths like /artists/artists)
@@ -184,4 +185,18 @@ const normalizeNavLinks = () => {
     else if (href.includes("#contact")) a.href = `${base}index.html#contact`;
     else if (href.includes("artists/index")) a.href = `${base}artists/index.html`;
   });
+};
+
+// Hide hero poster once iframe loads (fallback image for slow connections)
+const initVideoPoster = () => {
+  const bg = document.querySelector(".video-background");
+  if (!bg) return;
+  const iframe = bg.querySelector("iframe");
+  const poster = bg.querySelector(".video-poster");
+  if (!iframe || !poster) return;
+
+  const hide = () => poster.classList.add("is-hidden");
+  iframe.addEventListener("load", hide);
+  // Fallback hide after a few seconds in case load doesn't fire
+  setTimeout(hide, 5000);
 };
