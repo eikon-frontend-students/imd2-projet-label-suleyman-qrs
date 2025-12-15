@@ -286,7 +286,8 @@ header {
 
 .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px rgba(255, 111, 174, 0.35);
+  border-color: #ff6fae;
 }
 
 .card-image {
@@ -323,12 +324,13 @@ header {
   color: #fff;
   font-weight: 500;
   text-transform: uppercase;
-  transition: opacity 0.3s ease;
+  transition: color 0.3s ease, opacity 0.3s ease;
   letter-spacing: 0.05em;
 }
 
 .card-link:hover {
   opacity: 1;
+  color: #ff6fae;
 }
 
 .card-links .divider {
@@ -447,6 +449,8 @@ header {
 
 .merch-card:hover {
   transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(255, 111, 174, 0.35);
+  border-color: #ff6fae;
 }
 
 .merch-image {
@@ -467,24 +471,41 @@ header {
 }
 
 .merch-price {
-  font-size: 1.25rem;
-  color: #fff;
-  margin-bottom: 1.25rem;
-  font-weight: 500;
+  font-size: 1.35rem;
+  color: #ff6fae;
+  margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 .merch-buy-btn {
+  display: inline-block;
   text-decoration: none;
   color: #fff;
+  background: transparent;
   font-weight: 600;
   text-transform: uppercase;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.2s ease;
   letter-spacing: 0.05em;
   font-size: 1rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 999px;
+  margin: 0.75rem 0 1.25rem;
 }
 
 .merch-buy-btn:hover {
-  opacity: 0.6;
+  opacity: 0.7;
+  transform: translateY(-2px);
+}
+
+/* Make merch links (if present) match hover accent */
+.merch-links a {
+  color: #fff;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.merch-links a:hover {
+  color: #ff6fae;
+  opacity: 1;
 }
 
 /* Tours Section */
@@ -515,6 +536,11 @@ header {
   color: #fff;
 }
 
+.tours-section .view-all-btn {
+  position: relative;
+  z-index: 1;
+}
+
 .tours-container {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -541,7 +567,8 @@ header {
 
 .tour-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 25px rgba(255, 111, 174, 0.35);
+  border-color: #ff6fae;
 }
 
 .tour-header {
@@ -877,7 +904,8 @@ header {
 
 .artist-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(255, 111, 174, 0.35);
+  border-color: #ff6fae;
 }
 
 .artist-image {
@@ -922,7 +950,7 @@ header {
 .artist-hero {
   position: relative;
   width: 100%;
-  height: 520px;
+  height: 560px;
   margin-top: 72px;
   overflow: hidden;
 }
@@ -931,7 +959,8 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 10%;
+  transform: scale(1.08);
 }
 
 .artist-hero-overlay {
@@ -957,6 +986,18 @@ header {
   color: #ff6fae;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+}
+
+.artist-photo-credit {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  margin: 0;
+  color: #d8d8d8;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  text-align: right;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
 }
 
 .artist-about-section {
@@ -1004,9 +1045,31 @@ header {
   color: #fff;
 }
 
+.artist-contact {
+  margin-top: 2rem;
+  text-align: center;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.artist-contact h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  color: #ff6fae;
+}
+
+.artist-contact p {
+  margin: 0.1rem 0;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
 .artist-music-section {
   padding: 80px 160px;
-  background-color: #000;
+  background-color: #181a1b;
 }
 
 .artist-music-container {
@@ -1038,6 +1101,7 @@ header {
 .music-card:hover {
   transform: translateY(-5px);
   border-color: #ff6fae;
+  box-shadow: 0 8px 25px rgba(255, 111, 174, 0.35);
 }
 
 .music-card-image {
