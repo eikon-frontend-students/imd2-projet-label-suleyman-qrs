@@ -7,7 +7,7 @@
     "clean:cache": "rimraf .parcel-cache",
     "dev": "npm run clean:cache && parcel src/index.html src/artists/index.html src/artists/ya-tseen.html",
     "build": "npm run clean:output && parcel build src/index.html src/artists/index.html src/artists/ya-tseen.html --public-url './' --no-cache && npm run postbuild",
-    "postbuild": "mkdir -p dist/artists/css && cp -r dist/css/* dist/artists/css/ && mkdir -p dist/artists/js && cp -r dist/js/* dist/artists/js/ && mkdir -p dist/artists/img && cp -r dist/img/* dist/artists/img/ && sed -i '' 's|href=\"artists/ya-tseen.html\"|href=\"ya-tseen.html\"|g' dist/artists/index.html && sed -i '' 's|href=\"artists/index.html\"|href=\"/artists/index.html\"|g' dist/artists/index.html dist/artists/ya-tseen.html dist/index.html"
+    "postbuild": "mkdir -p dist/artists/css && cp -r dist/css/* dist/artists/css/ && mkdir -p dist/artists/js && cp -r dist/js/* dist/artists/js/ && mkdir -p dist/artists/img && cp -r dist/img/* dist/artists/img/ && sed -i '' 's|href=\"artists/ya-tseen.html\"|href=\"ya-tseen.html\"|g' dist/artists/index.html"
   },
   "repository": {
     "type": "git",
