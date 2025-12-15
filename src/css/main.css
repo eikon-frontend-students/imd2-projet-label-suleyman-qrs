@@ -62,8 +62,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
-  max-width: 1400px;
+  padding: 1rem 1.25rem;
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -221,11 +222,13 @@ header {
 }
 
 .cards-container {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 2rem;
-  padding: 0 160px;
-  flex-wrap: wrap;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
 }
 
 .card {
@@ -237,6 +240,9 @@ header {
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.25);
   padding: 1rem;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
 }
 
 .card:hover {
@@ -245,8 +251,10 @@ header {
 }
 
 .card-image {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 1 / 1;
+  height: auto;
   object-fit: cover;
   margin-bottom: 1rem;
 }
@@ -375,11 +383,14 @@ header {
 }
 
 .merch-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   justify-content: center;
-  gap: 3rem;
-  padding: 0 160px;
-  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
 }
 
 .merch-card {
@@ -391,6 +402,8 @@ header {
   border: 1px solid rgba(255, 255, 255, 0.25);
   cursor: pointer;
   max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .merch-card:hover {
@@ -399,8 +412,9 @@ header {
 
 .merch-image {
   width: 100%;
-  max-width: 400px;
-  height: 400px;
+  max-width: 360px;
+  aspect-ratio: 1 / 1;
+  height: auto;
   object-fit: cover;
   margin-bottom: 1.5rem;
 }
@@ -464,9 +478,12 @@ header {
 
 .tours-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
-  padding: 0 160px;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
   position: relative;
   z-index: 1;
 }
@@ -662,7 +679,10 @@ header {
 
 /* Footer Main */
 .footer-main {
-  padding: 3rem 160px;
+  padding: 3rem 1.5rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .footer-content {
@@ -730,7 +750,10 @@ header {
 
 /* Footer Bottom */
 .footer-bottom {
-  padding: 2rem 160px;
+  padding: 2rem 1.5rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
   border-top: 1px solid #333;
   display: flex;
   justify-content: space-between;
@@ -792,9 +815,12 @@ header {
 
 .artists-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
-  padding: 0 160px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
 }
 
 .artist-card {
@@ -806,6 +832,9 @@ header {
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 1.5rem;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
 }
 
 .artist-card:hover {
@@ -815,8 +844,9 @@ header {
 
 .artist-image {
   width: 100%;
-  max-width: 300px;
-  height: 300px;
+  max-width: 320px;
+  aspect-ratio: 1 / 1;
+  height: auto;
   object-fit: cover;
   margin-bottom: 1.5rem;
   border-radius: 4px;
@@ -1042,7 +1072,7 @@ header {
   }
 
   /* Adjust tour section */
-  .tour-container {
+  .tours-container {
     gap: 20px;
   }
 
@@ -1100,8 +1130,8 @@ header {
     gap: 25px;
   }
 
-  .tour-container {
-    grid-template-columns: repeat(2, 1fr);
+  .tours-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .artists-container {
@@ -1183,7 +1213,7 @@ header {
   /* Single column layouts */
   .upcoming-cards,
   .merch-container,
-  .tour-container,
+  .tours-container,
   .artists-container,
   .music-grid {
     grid-template-columns: 1fr;
