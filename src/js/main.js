@@ -157,4 +157,31 @@ document.addEventListener("DOMContentLoaded", () => {
   videoCarousel();
   burgerMenu();
   shapePlayground();
+  normalizeNavLinks();
 });
+
+// Normalize nav links so they always point to the site root (prevents nested paths like /artists/artists)
+const normalizeNavLinks = () => {
+  const nav = document.querySelector(".top-nav");
+  if (!nav) return;
+
+  const path = window.location.pathname;
+  // If we're in /.../artists/, strip that segment to get the site root; otherwise use current directory
+  const base =
+    path.includes("/artists/")
+      ? path.split("/artists/")[0] + "/"
+      : path.replace(/[^/]*$/, "");
+
+  const logo = nav.querySelector(".nav-logo a");
+  if (logo) logo.href = `${base}index.html`;
+
+  const links = nav.querySelectorAll(".nav-links a");
+  links.forEach((a) => {
+    const href = a.getAttribute("href") || "";
+    if (href.includes("#upcoming")) a.href = `${base}index.html#upcoming`;
+    else if (href.includes("#merch")) a.href = `${base}index.html#merch`;
+    else if (href.includes("#tours")) a.href = `${base}index.html#tours`;
+    else if (href.includes("#contact")) a.href = `${base}index.html#contact`;
+    else if (href.includes("artists/index")) a.href = `${base}artists/index.html`;
+  });
+};
